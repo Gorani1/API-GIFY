@@ -37,7 +37,7 @@ $(document).on ("click", ".food-button", function(){
             foodImage.attr("src",still);
             foodImage.attr("data-still", still);
             foodImage.attr("data-animate", animated);
-            foodImage.attr("data-state",still);
+            foodImage.attr("data-state","still");
             foodImage.addClass("food-image");
 
             foodDiv.append(p);
@@ -53,10 +53,11 @@ $(document).on("click", ".food-image", function(){
     console.log(state)
     if (state === "still"){
         $(this).attr("src", $(this).attr("data-animate"));
-        $(this).attr("data-state", "animate");
+        $(this).attr("data-state", "animated");
     }
     else {
         $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
         
     }
 });
